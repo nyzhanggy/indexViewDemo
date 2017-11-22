@@ -2,9 +2,9 @@
 
 现在要实现一个跟微信的sectionIndexView 一样的索引条。本来想用系统的sectionIndexView，但是发现系统的 sectionIndexView 可定制性太差。网上搜了搜也没找到比较满意的，于是就自己写了一个。可以先看一下效果
 
-![indexView-1](./indexView-1.gif)
+![indexView-1](https://raw.githubusercontent.com/DullDevil/pics/master/indexView/indexView-1.gif)
 
-![indexView-2](./indexView-2.gif)
+![indexView-2](https://raw.githubusercontent.com/DullDevil/pics/master/indexView/indexView-2.gif)
 
 主要的功能
 
@@ -153,7 +153,7 @@ indexView 需要一个代理协议。这个协议有两个方法：一个必须�
 
 其实在操作indexView 的时候，我们并不能确定 tableview 能否滚动到对应的位置，所以在操作之后，需要 tableview 告诉 indexView 这个操作到底能滚到哪里。如果 tableview 没有给回调，那就默认能滚到选择的位置，那么 indexView 上点击的元素就是高亮；如果有回调，那么 indexView 就要把指定的元素高亮。
 
-![indexView-3](./indexView-3.gif)
+![indexView-3](https://raw.githubusercontent.com/DullDevil/pics/master/indexView/indexView-3.gif)
 
 #### tableview
 
@@ -165,7 +165,7 @@ tableview 中需要处理的就是，现在显示的到底是哪个section？这
 
 这里有个问题要注意一下，tableview 的 contentOffset 会自动偏移。
 
-![indexView-4](./indexView-4.png)
+![indexView-4](https://raw.githubusercontent.com/DullDevil/pics/master/indexView/indexView-4.png)
 
 这种状态下的 contentOffset 是 -20，有导航栏就是 66 了。也就是所我们不能直接用 contentOffset ，需要一个转换。
 
